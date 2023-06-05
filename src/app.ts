@@ -1,6 +1,7 @@
-import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
-import usersRouter from './app/modules/users/users.route';
+import express, { Application } from 'express';
+import globalErrorHandler from './app/middlewares/globalErrorHnadler';
+import { UserRoute } from './app/modules/users/user.route';
 const app: Application = express();
 
 // cors
@@ -11,10 +12,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //
-app.use('/api/v1/users/', usersRouter);
+app.use('/api/v1/users/', UserRoute);
 // Testing
-app.get('/', async (req: Request, res: Response) => {
-  res.send('Working successfully');
-});
+// app.get('/', async (req: Request, res: Response) => {
+//   console.log(x);
+// });
+
+// Global Error Handler
+app.use(globalErrorHandler);
 
 export default app;

@@ -1,0 +1,25 @@
+{
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\successes\\.6c2814ba0dfe00576db86a36324ba3abde9dc279-audit.json",
+  "files": [
+    {
+      "date": 1685896096509,
+      "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\successes\\success-2023-06-04-22.log",
+      "hash": "ce02003d421a1179dc1c5138602a876a41fdfc5e23d098a3c159e6414eff3403"
+    },
+    {
+      "date": 1685938919726,
+      "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\successes\\success-2023-06-05-10.log",
+      "hash": "d431fd6c0b201b33684e2b17d587bf40417517dac8786354a857cf11b38b81e4"
+    },
+    {
+      "date": 1685941332303,
+      "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\successes\\success-2023-06-05-11.log",
+      "hash": "573c0b3e4bcdf99154fa41e131797982b90c3f700a76d8cabd37ad896fcb420f"
+    }
+  ],
+  "hashType": "sha256"
+}
