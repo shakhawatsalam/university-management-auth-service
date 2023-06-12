@@ -1,5 +1,6 @@
 import httpStatus from 'http-status';
 import { Schema, model } from 'mongoose';
+
 import ApiError from '../../../errors/Apierror';
 import {
   academicSemesterCodes,
@@ -19,7 +20,7 @@ const AcademicSemesterSchema = new Schema<IAcademicSemester>(
       enum: academicSemesterTitles,
     },
     year: {
-      type: Number,
+      type: String,
       required: true,
     },
     code: {
