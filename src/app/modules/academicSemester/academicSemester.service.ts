@@ -44,16 +44,15 @@ const getAllSemesters = async (
       })),
     });
   }
-
   if (Object.keys(filtersData).length) {
+    // filter data is an object  { code: '02' } && { code: '02', year: '2025' } exact matching
     andCondition.push({
       $and: Object.entries(filtersData).map(([field, value]) => ({
         [field]: value,
       })),
     });
   }
-
-  // MY Optimization starts================================
+  // MY Optimization starts ================================
   // const orCondition = academicSemesterSearchFields.map(field => ({
   //   [field]: {
   //     $regex: searchTerm,
@@ -93,12 +92,13 @@ const getAllSemesters = async (
   const sortCondition: { [key: string]: SortOrder } = {};
 
   if (sortBy && sortOrder) {
-    sortCondition[sortBy] = sortOrder;
+    sortCondition[sortBy] = sortOrder; // 1 or -1 && asc or desc
   }
 
   const whereConditions = andCondition.length > 0 ? { $and: andCondition } : {};
+
   const result = await AcademicSemester.find(whereConditions)
-    .sort(sortCondition)
+    .sort(sortCondition) // { createdAt: 'desc' } = default
     .skip(skip)
     .limit(limit);
   const total = await AcademicSemester.countDocuments();
