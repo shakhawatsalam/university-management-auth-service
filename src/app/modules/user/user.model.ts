@@ -4,21 +4,36 @@ import { IUser, UserModel } from './user.interface';
 const userSchema = new Schema<IUser>(
   {
     id: {
-      type: 'string',
+      type: String,
       required: true,
       unique: true,
     },
     role: {
-      type: 'string',
+      type: String,
       required: true,
     },
     password: {
-      type: 'string',
+      type: String,
       required: true,
+    },
+    student: {
+      type: Schema.Types.ObjectId,
+      ref: 'Student',
+    },
+    faculty: {
+      type: Schema.Types.ObjectId,
+      ref: 'faculty',
+    },
+    admin: {
+      type: Schema.Types.ObjectId,
+      ref: 'admin',
     },
   },
   {
     timestamps: true,
+    toJSON: {
+      virtuals: true,
+    },
   }
 );
 
