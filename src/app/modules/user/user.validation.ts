@@ -151,7 +151,54 @@ const createFacultyZodValidation = z.object({
   }),
 });
 
+// Create Admin Zod Validation
+const createAdminZodSchema = z.object({
+  body: z.object({
+    password: z.string().optional(),
+
+    admin: z.object({
+      name: z.object({
+        firstName: z.string({
+          required_error: 'First Name is required',
+        }),
+        lastName: z.string({
+          required_error: 'Last Name is required',
+        }),
+        middleName: z.string().optional(),
+      }),
+      dateOfBirth: z.string({
+        required_error: 'Date of Birth is required',
+      }),
+      gender: z.string({
+        required_error: 'Gender is required',
+      }),
+      email: z
+        .string({
+          required_error: 'Email is required',
+        })
+        .email(),
+      contactNo: z.string({
+        required_error: 'Contact No is required',
+      }),
+      emergencyContactNo: z.string({
+        required_error: 'Emergency Contact No is required',
+      }),
+      presentAddress: z.string({
+        required_error: 'Present Address is required',
+      }),
+      managementDepartment: z.string({
+        required_error: 'Manage department is required',
+      }),
+      designation: z.string({
+        required_error: 'Designation is required',
+      }),
+      profileImage: z.string().optional(),
+    }),
+  }),
+});
+
 export const UserValidation = {
   createStudentZodSchema,
   createFacultyZodValidation,
+  createAdminZodSchema,
 };

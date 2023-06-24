@@ -25,10 +25,10 @@ const UserSchema = new Schema<IUser, UserModel>(
       type: Schema.Types.ObjectId,
       ref: 'Faculty',
     },
-    // admin: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: 'Admin',
-    // },
+    admin: {
+      type: Schema.Types.ObjectId,
+      ref: 'Admin',
+    },
   },
   {
     timestamps: true,

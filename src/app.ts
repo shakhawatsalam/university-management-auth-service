@@ -13,14 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // routes
-// app.use('/api/v1/users/', UserRoute);
-// app.use('/api/v1/academic-semesters', AcademicSemesterRoutes);
 app.use('/api/v1/', routers);
-
-// Testing
-// app.get('/', (req: Request, res: Response) => {
-//   throw new ApiError(httpStatus.CONFLICT, 'hello world');
-// });
 
 // Global Error Handler
 app.use(globalErrorHandler);
@@ -39,17 +32,5 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   });
   next();
 });
-
-// const academicSemester = {
-//   code: '01',
-//   year: '2024',
-// };
-
-// const testId = async () => {
-//   const testId = await generateStudentId(academicSemester);
-//   console.log(testId);
-// };
-
-// testId();
 
 export default app;
