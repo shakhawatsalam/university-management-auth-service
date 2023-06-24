@@ -1,7 +1,7 @@
 import { Schema, model } from 'mongoose';
 import { IUser, UserModel } from './user.interface';
 
-const userSchema = new Schema<IUser>(
+const UserSchema = new Schema<IUser, UserModel>(
   {
     id: {
       type: String,
@@ -15,6 +15,7 @@ const userSchema = new Schema<IUser>(
     password: {
       type: String,
       required: true,
+      select: 0,
     },
     student: {
       type: Schema.Types.ObjectId,
@@ -22,12 +23,12 @@ const userSchema = new Schema<IUser>(
     },
     faculty: {
       type: Schema.Types.ObjectId,
-      ref: 'faculty',
+      ref: 'Faculty',
     },
-    admin: {
-      type: Schema.Types.ObjectId,
-      ref: 'admin',
-    },
+    // admin: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: 'Admin',
+    // },
   },
   {
     timestamps: true,
@@ -37,4 +38,4 @@ const userSchema = new Schema<IUser>(
   }
 );
 
-export const User = model<IUser, UserModel>('User', userSchema);
+export const User = model<IUser, UserModel>('User', UserSchema);

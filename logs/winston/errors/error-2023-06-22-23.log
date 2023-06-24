@@ -1,0 +1,3 @@
+Thu Jun 22 2023 23:34:52  [right meow!] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Thu Jun 22 2023 23:37:2  [right meow!] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Thu Jun 22 2023 23:39:23  [right meow!] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]

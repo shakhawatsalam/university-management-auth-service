@@ -13,9 +13,10 @@ export type IFaculty = {
   name: UserName;
   profileImage: string;
   dateOfBirth?: string;
+  gender: 'male' | 'female';
   email: string;
   contactNo: string;
-  emergencyContactNO: string;
+  emergencyContactNo: string;
   permanentAddress: string;
   presentAddress: string;
   bloodGroup?: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
@@ -32,7 +33,7 @@ export type IFacultyFilters = {
   email?: string;
   contactNo?: string;
   emergencyContactNO?: string;
-  gander?: 'male' | 'female';
+  gender?: 'male' | 'female';
   bloodGroup?: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
   academicDepartment?: string;
   academicFaculty?: string;

@@ -1,7 +1,8 @@
 import { z } from 'zod';
+import { bloodGroup } from '../student/student.constant';
 
-// Zod validations
-const createUserZodSchema = z.object({
+// Create Student Zod Validation
+const createStudentZodSchema = z.object({
   body: z.object({
     password: z.string().optional(),
     student: z.object({
@@ -94,9 +95,63 @@ const createUserZodSchema = z.object({
   }),
 });
 
-// Zod validations
-// await createUserZodSchema.parseAsync(req);
+// Create Faculty Zod Validation
+const createFacultyZodValidation = z.object({
+  body: z.object({
+    password: z.string().optional(),
+    faculty: z.object({
+      name: z.object({
+        firstName: z.string({
+          required_error: 'First Name is required',
+        }),
+        lastName: z.string({
+          required_error: 'Last name is required',
+        }),
+        middleName: z.string({
+          required_error: 'Middle name is required',
+        }),
+      }),
+      gender: z.string({
+        required_error: 'Gender is required',
+      }),
+      dateOfBirth: z.string({
+        required_error: 'Date of Birth is required',
+      }),
+      email: z
+        .string({
+          required_error: 'Email is required',
+        })
+        .email(),
+      contactNo: z.string({
+        required_error: 'Contact No is required',
+      }),
+      emergencyContactNo: z.string({
+        required_error: 'Emergency Contact is required',
+      }),
+      bloodGroup: z.enum([...bloodGroup] as [string, ...string[]]).optional(),
+      presentAddress: z.string({
+        required_error: 'Present Address is required',
+      }),
+      permanentAddress: z.string({
+        required_error: 'Permanent address is required',
+      }),
+      academicDepartment: z.string({
+        required_error: 'Academic department is required',
+      }),
+      academicFaculty: z.string({
+        required_error: 'Academic Faculty',
+      }),
+      designation: z.string({
+        required_error: 'Designation is required',
+      }),
+      profileImage: z.string({
+        required_error: 'Profile Image',
+      }),
+    }),
+  }),
+});
 
 export const UserValidation = {
-  createUserZodSchema,
+  createStudentZodSchema,
+  createFacultyZodValidation,
 };
