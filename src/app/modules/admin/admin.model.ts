@@ -9,13 +9,8 @@ const AdminSchema = new Schema<IAdmin, AdminModel>(
       unique: true,
     },
     name: {
-      required: true,
       type: {
         firstName: {
-          type: String,
-          required: true,
-        },
-        middleName: {
           type: String,
           required: true,
         },
@@ -23,7 +18,11 @@ const AdminSchema = new Schema<IAdmin, AdminModel>(
           type: String,
           required: true,
         },
+        middleName: {
+          type: String,
+        },
       },
+      required: true,
     },
     dateOfBirth: {
       type: String,
@@ -42,7 +41,7 @@ const AdminSchema = new Schema<IAdmin, AdminModel>(
       required: true,
     },
     contactNo: {
-      types: String,
+      type: String,
       required: true,
       unique: true,
     },
