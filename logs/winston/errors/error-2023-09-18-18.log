@@ -1,0 +1,3 @@
+Mon Sep 18 2023 18:6:20  [right meow!] error: AcademicDepartment validation failed: academicFaculty: Cast to ObjectId failed for value "15de6716-15af-41fc-a34c-2eec43331e97" (type string) at path "academicFaculty" because of "BSONError"
+Mon Sep 18 2023 18:25:53  [right meow!] error: AcademicDepartment validation failed: academicFaculty: Cast to ObjectId failed for value "15de6716-15af-41fc-a34c-2eec43331e97" (type string) at path "academicFaculty" because of "BSONError"
+Mon Sep 18 2023 18:28:13  [right meow!] error: AcademicDepartment validation failed: academicFaculty: Cast to ObjectId failed for value "15de6716-15af-41fc-a34c-2eec43331e97" (type string) at path "academicFaculty" because of "BSONError"

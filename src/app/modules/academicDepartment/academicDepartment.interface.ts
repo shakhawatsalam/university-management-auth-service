@@ -4,6 +4,7 @@ import { IAcademicFaculty } from '../academicFaculty/academicFaculty.interface';
 export type IAcademicDepartment = {
   title: string;
   academicFaculty: Types.ObjectId | IAcademicFaculty;
+  syncId: string;
 };
 
 export type AcademicDepartmentModel = Model<
@@ -19,5 +20,15 @@ export type IAcademicDepartmentFilters = {
 export type IAcademicDepartmentCreatedEvent = {
   title: string;
   academicFacultyId: string;
+  id: string;
+};
+
+export type IAcademicDepartmentUpdatedEvent = {
+  id: string;
+  title: string;
+  academicFacultyId: string;
+};
+
+export type IAcademicDepartmentDeletedEvent = {
   id: string;
 };
