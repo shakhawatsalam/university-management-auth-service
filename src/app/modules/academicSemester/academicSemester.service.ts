@@ -10,6 +10,7 @@ import {
 } from './academicSemester.constant';
 import {
   IAcademicSemester,
+  IAcademicSemesterCreatedEvent,
   IAcademicSemesterFilters,
 } from './academicSemester.interface';
 import { AcademicSemester } from './academicSemester.model';
@@ -148,10 +149,56 @@ const deleteSemester = async (
   return result;
 };
 
+// Create data in mongoDB when hit by API Gateway Server
+const createSemesterFromEvent = async (
+  e: IAcademicSemesterCreatedEvent
+): Promise<void> => {
+  await AcademicSemester.create({
+    title: e.title,
+    year: e.year,
+    code: e.code,
+    startMonth: e.startMonth,
+    endMonth: e.endMonth,
+    syncId: e.id,
+  });
+};
+
+// Update data in mongoDB when hit by API Gateway Server
+const updateOneIntoDBFromEvent = async (
+  e: IAcademicSemesterCreatedEvent
+): Promise<void> => {
+  await AcademicSemester.findOneAndUpdate(
+    {
+      syncId: e.id,
+    },
+    {
+      $set: {
+        title: e.title,
+        year: e.year,
+        code: e.code,
+        startMonth: e.startMonth,
+        endMonth: e.endMonth,
+        syncId: e.id,
+      },
+    }
+  );
+};
+
+// Delete data in mongoDB when hit by API Gateway Server
+const deleteOneintoDBFromEvent = async (
+  e: IAcademicSemesterCreatedEvent
+): Promise<void> => {
+  await AcademicSemester.findOneAndDelete({
+    syncId: e.id,
+  });
+};
 export const AcademicSemesterService = {
   createSemester,
   getAllSemesters,
   getSingleSemester,
   updateSemester,
   deleteSemester,
+  createSemesterFromEvent,
+  updateOneIntoDBFromEvent,
+  deleteOneintoDBFromEvent,
 };
