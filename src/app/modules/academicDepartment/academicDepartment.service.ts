@@ -5,6 +5,7 @@ import { IPaginationOptions } from '../../../interfaces/pagination';
 import { academicDepartmentFilterableFields } from './academicDepartment.constant';
 import {
   IAcademicDepartment,
+  IAcademicDepartmentCreatedEvent,
   IAcademicDepartmentFilters,
 } from './academicDepartment.interface';
 import { AcademicDepartment } from './academicDepartment.model';
@@ -107,10 +108,21 @@ const getAllDepartment = async (
     data: result,
   };
 };
+
+const createAcademicDepartmentFromEvent = async (
+  e: IAcademicDepartmentCreatedEvent
+) => {
+  await AcademicDepartment.create({
+    title: e.title,
+    academicFacultyId: e.academicFacultyId,
+    syncId: e.id,
+  });
+};
 export const AcademicDepartmentService = {
   createDepartment,
   getSingleAcademicDepartment,
   updateAcademicDepartment,
   deleteDepartment,
   getAllDepartment,
+  createAcademicDepartmentFromEvent,
 };

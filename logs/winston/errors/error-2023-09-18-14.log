@@ -1,0 +1,2 @@
+Mon Sep 18 2023 14:10:5  [right meow!] error: failed to connect Init is not defined
+Mon Sep 18 2023 14:21:4  [right meow!] error: E11000 duplicate key error collection: univarsity-management.academicfaculties index: title_1 dup key: { title: "Faculty of Arts & History" }
