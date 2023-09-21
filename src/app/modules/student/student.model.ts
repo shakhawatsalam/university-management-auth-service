@@ -69,7 +69,7 @@ export const studentSchema = new Schema<IStudent, StudentModel>(
           type: String,
           required: true,
         },
-        fatherContactNO: {
+        fatherContactNo: {
           type: String,
           required: true,
         },
@@ -81,7 +81,7 @@ export const studentSchema = new Schema<IStudent, StudentModel>(
           type: String,
           required: true,
         },
-        motherContactNO: {
+        motherContactNo: {
           type: String,
           required: true,
         },
@@ -101,7 +101,7 @@ export const studentSchema = new Schema<IStudent, StudentModel>(
         occupation: {
           type: String,
         },
-        contactNO: {
+        contactNo: {
           type: String,
           required: true,
         },

@@ -6,16 +6,6 @@
     "auditLog": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\errors\\.57eef4245f9a1f24c2994b6d667d04fa0f29dac6-audit.json",
     "files": [
         {
-            "date": 1693887603421,
-            "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\errors\\error-2023-09-05-10.log",
-            "hash": "91aa37fcee4f5f153416f4761bc11723535fc94b7b2aba4f0bceb9f48e99cad2"
-        },
-        {
-            "date": 1693920077716,
-            "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\errors\\error-2023-09-05-19.log",
-            "hash": "adf66ff7f5f618adbb7cba31aef6e28a6bd76a07e4a94e6eb28c75520ec2af3e"
-        },
-        {
             "date": 1694329204641,
             "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\errors\\error-2023-09-10-13.log",
             "hash": "868e10b431d203c9899fbc223f63858a309b083390844b33130a8b0cd6803cbd"
@@ -109,6 +99,46 @@
             "date": 1695049375839,
             "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\errors\\error-2023-09-18-21.log",
             "hash": "0781033f6effd6bcc69446a39dfd4002a062956dd67c25d209b7451e87dc20b3"
+        },
+        {
+            "date": 1695098914639,
+            "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\errors\\error-2023-09-19-10.log",
+            "hash": "de4347089b5f394cf08d336f53480b359a686357feb1bed0d106d63fa9d82698"
+        },
+        {
+            "date": 1695113282031,
+            "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\errors\\error-2023-09-19-14.log",
+            "hash": "6ced9e67b7151e0889887d61cb21b502c0b84be48b2c75efe3d2854690623c83"
+        },
+        {
+            "date": 1695216421605,
+            "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\errors\\error-2023-09-20-19.log",
+            "hash": "9d642386970ddb48df335342eb8b342b04bc744b7534915be03c846d941a19a6"
+        },
+        {
+            "date": 1695221086521,
+            "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\errors\\error-2023-09-20-20.log",
+            "hash": "9d8b6a2d14def3a1acb5d2f418952a56a6c13aa1bf81c90c552047b0138c3a0f"
+        },
+        {
+            "date": 1695224022092,
+            "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\errors\\error-2023-09-20-21.log",
+            "hash": "50af22ef115a393120c5ccc83ca9af2a4b16d96fa022e40ca50f257a7e2ec65f"
+        },
+        {
+            "date": 1695227563344,
+            "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\errors\\error-2023-09-20-22.log",
+            "hash": "fa5bb2c033b7770c9c08407e49e74a70b4377478875e9b128daa22a139792fd9"
+        },
+        {
+            "date": 1695229201208,
+            "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\errors\\error-2023-09-20-23.log",
+            "hash": "0c2cb9e2c0c7127128786851ff31df8524b71e42dcd5c19856d9796293648695"
+        },
+        {
+            "date": 1695269064671,
+            "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\university-management-auth-service\\logs\\winston\\errors\\error-2023-09-21-10.log",
+            "hash": "1c1d27ef2a966ec826d0a2045008e954289ad3c5b1344dea9719a51f518f451f"
         }
     ],
     "hashType": "sha256"

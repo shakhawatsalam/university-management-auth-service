@@ -12,17 +12,17 @@ type UserName = {
 type Guardian = {
   fatherName: string;
   fatherOccupation: string;
-  fatherContactNO: string;
+  fatherContactNo: string;
   motherName: string;
   motherOccupation: string;
-  motherContactNO: string;
+  motherContactNo: string;
   address: string;
 };
 
 type LocalGuardian = {
   name: string;
   occupation: string;
-  contactNO: string;
+  contactNo: string;
   address: string;
 };
 

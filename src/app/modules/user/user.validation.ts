@@ -61,7 +61,7 @@ const createStudentZodSchema = z.object({
         fatherOccupation: z.string({
           required_error: 'Fatheroccupation is required',
         }),
-        fatherContactNO: z.string({
+        fatherContactNo: z.string({
           required_error: 'Father Contact No is required',
         }),
         motherName: z.string({
@@ -70,7 +70,7 @@ const createStudentZodSchema = z.object({
         motherOccupation: z.string({
           required_error: 'Mother Contact No is required',
         }),
-        motherContactNO: z.string({
+        motherContactNo: z.string({
           required_error: 'Mother Contact No is required',
         }),
         address: z.string({
@@ -85,7 +85,7 @@ const createStudentZodSchema = z.object({
           occupation: z.string({
             required_error: 'Occupation is required',
           }),
-          contactNO: z.string({ required_error: 'Contact No is required' }),
+          contactNo: z.string({ required_error: 'Contact No is required' }),
           address: z.string({ required_error: 'Address is required' }),
         })
         .optional(),
