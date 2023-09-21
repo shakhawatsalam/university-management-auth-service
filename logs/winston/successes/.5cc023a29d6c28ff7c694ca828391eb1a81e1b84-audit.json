@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\University-Management-AUTH-Service\\logs\\winston\\successes\\.5cc023a29d6c28ff7c694ca828391eb1a81e1b84-audit.json",
+    "files": [
+        {
+            "date": 1695294537815,
+            "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\University-Management-AUTH-Service\\logs\\winston\\successes\\success-2023-09-21-17.log",
+            "hash": "a02a0369e324f0a73819ced1f9230ac29846dacb822df1ee65c37fe170a881ed"
+        },
+        {
+            "date": 1695299732724,
+            "name": "E:\\Web Development Course\\Next Level Web DEV\\University-Management\\University-Management-AUTH-Service\\logs\\winston\\successes\\success-2023-09-21-18.log",
+            "hash": "3bb685d0880c4c3ddc6ca605f40d0a2b376c2081a2efec11947b809a6a96fe6d"
+        }
+    ],
+    "hashType": "sha256"
+}
