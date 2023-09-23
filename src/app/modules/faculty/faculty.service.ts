@@ -5,8 +5,12 @@ import ApiError from '../../../errors/Apierror';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
+import { RedisClient } from '../../../shared/redis';
 import { User } from '../user/user.model';
-import { facultySearchableFields } from './faculty.constant';
+import {
+  EVENT_FACULTY_UPDATED,
+  facultySearchableFields,
+} from './faculty.constant';
 import { IFaculty, IFacultyFilters } from './faculty.interface';
 import { Faculty } from './faculty.model';
 
@@ -69,7 +73,7 @@ const getAllFaculties = async (
 
 // Get Single Faculty
 const getSingleFaculty = async (id: string): Promise<IFaculty | null> => {
-  const result = await Faculty.findOne({ _id: id })
+  const result = await Faculty.findOne({ id: id })
     .populate('academicDepartment')
     .populate('academicFaculty');
   return result;
@@ -79,7 +83,7 @@ const updateFaculty = async (
   id: string,
   payload: Partial<IFaculty>
 ): Promise<IFaculty | null> => {
-  const isExist = await Faculty.findOne({ _id: id });
+  const isExist = await Faculty.findOne({ id: id });
 
   if (!isExist) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Faculty not Found');
@@ -96,12 +100,18 @@ const updateFaculty = async (
   }
 
   const result = await Faculty.findOneAndUpdate(
-    { _id: id },
+    { id: id },
     updatedFacultyData,
     {
       new: true,
     }
-  );
+  )
+    .populate('academicFaculty')
+    .populate('academicDepartment');
+
+  if (result) {
+    RedisClient.publish(EVENT_FACULTY_UPDATED, JSON.stringify(result));
+  }
 
   return result;
 };

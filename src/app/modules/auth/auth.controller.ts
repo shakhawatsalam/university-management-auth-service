@@ -9,7 +9,7 @@ import { AuthService } from './auth.service';
 const loginUser = catchAsync(async (req: Request, res: Response) => {
   const { ...loginData } = req.body;
   const result = await AuthService.loginUser(loginData);
-  const { refreshToken, ...others } = result || {};
+  const { refreshToken } = result || {};
 
   //set refresh token into cookie
   const cookieOptions = {
@@ -21,7 +21,7 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
     statusCode: httpStatus.OK,
     success: true,
     message: 'User Login Successfully',
-    data: others,
+    data: result,
   });
 });
 
@@ -52,7 +52,7 @@ const changePassword = catchAsync(async (req: Request, res: Response) => {
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'User Login Successfully',
+    message: 'Password Change Successfully',
     data: result,
   });
 });
